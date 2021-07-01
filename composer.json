@@ -1,0 +1,45 @@
+{
+    "name": "laravel-fans/confluence",
+    "description": "Confluence SDK for PHP Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sinkcup",
+            "email": "sinkcup@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LaravelFans\\Confluence\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\": "vendor/orchestra/testbench-core/laravel/app/",
+            "LaravelFans\\Confluence\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelFans\\Confluence\\ConfluenceServiceProvider"
+            ],
+            "aliases": {
+                "Confluence": "LaravelFans\\Confluence\\Facades\\Confluence"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^8.0",
+        "sinkcup/confluence-sdk-php": "^0.1.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.14",
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6"
+    }
+}
